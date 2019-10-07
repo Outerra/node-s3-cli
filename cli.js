@@ -115,7 +115,7 @@ function setup(secretAccessKey, accessKeyId) {
 
 function cmdSyncList() {
   if (args.list) {
-    var array = fs.readFileSync(args.list).toString().split("\n");
+    var array = fs.readFileSync(args.list).toString().split(/\r\n|\n|\r/);
     var a0 = args._[0];
     var a1 = args._[1];
     var nparallel = 1;
